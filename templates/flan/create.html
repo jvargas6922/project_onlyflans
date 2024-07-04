@@ -1,0 +1,32 @@
+{% extends '../layouts/base.html' %}
+
+{% block title %}
+    OnlyFlan|Crear Flan
+{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>Pagina para crear Flan</h1>
+        <a href="{% url 'index_flan' %}" class="btn btn-secondary">Volver</a>
+    </div>
+    <form class="container border border-warning" method="post">
+        {% csrf_token %}
+        <div class="col-md-4">
+            <label class="form-label" for="name">Nombre Flan</label>
+            <input class="form-control" type="text" name="name" id="id_name" placeholder="ingrese nombre">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="description">Descripción Flan</label>
+            <input class="form-control" type="text" name="description" id="id_description" placeholder="ingrese descripción">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="image_url">url imagen Flan</label>
+            <input class="form-control" type="text" name="image_url" id="id_image_url" placeholder="ingrese url de imagen">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="short_name">nombre corto Flan</label>
+            <input class="form-control" type="text" name="short_name" id="id_short_name" placeholder="ingrese nombre corto">
+        </div>
+        <button type="submit">Registrar</button>
+    </form>
+{% endblock %}

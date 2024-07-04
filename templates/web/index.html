@@ -1,0 +1,23 @@
+{% extends '../layouts/base.html' %}
+{% block title %}
+     OnlyFlans|index
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Pagina index</h1>
+    <div class="container-fluid">
+        <div class="row">
+            {% for flan in flans  %}
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ flan.short_name }}</h5>
+                            <p class="card-text">{{ flan.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

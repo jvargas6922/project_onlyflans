@@ -1,0 +1,28 @@
+{% extends '../layouts/base.html' %}
+
+{% block title %}
+    OnlyFlan|Flan
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="text-center">Listado de Flans</h1>
+    <a href="{% url 'create_flan' %}" class="btn btn-primary mb-3">Crear Flan</a>
+</div>    
+
+    <div class="container-fluid">
+        <div class="row">
+            {% for flan in flans  %}
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ flan.short_name }}</h5>
+                            <p class="card-text">{{ flan.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
