@@ -1,0 +1,13 @@
+{% extends '../layouts/base.html' %}
+{% block title %}
+    OnlyFlan|Flan
+{% endblock %}
+
+{% block content %} 
+    <div class="alert alert-success text-center" role="alert">
+       Flan creado correctamente
+    </div>
+    <div class="text-center">
+        <a href="{% url 'create_flan' %}" class="btn btn-primary mb-3">crear Flan</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends '../layouts/base.html' %}
+
+{% block title %}
+    OnlyFlans|Contacto
+{% endblock %}
+
+{% block content %}
+    <div class="alert alert-success text-center" role="alert">
+        Contacto registrado con exito
+  </div>
+  <a class="btn btn-primary" href="{% url 'contact_web' %}">Crear contacto</a>
+{% endblock %}

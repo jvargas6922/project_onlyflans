@@ -10,10 +10,10 @@
     <a href="{% url 'create_flan' %}" class="btn btn-primary mb-3">Crear Flan</a>
 </div>    
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="overflow-y: auto; max-height:550px ;">
         <div class="row">
             {% for flan in flans  %}
-                <div class="col-md-3">
+                <div class="col-md-3 mt-2">
                     <div class="card" style="width: 18rem;">
                         <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
                         <div class="card-body">
